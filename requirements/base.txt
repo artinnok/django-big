@@ -2,4 +2,4 @@ Django == 1.9.5
 Pillow==3.1.0
 unipath==1.1
 Celery==3.1.23
-flower==0.8.4
+
