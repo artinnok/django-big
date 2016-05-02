@@ -61,3 +61,18 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 .idea
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# PyCharm
+.idea/
+.idea_modules/
