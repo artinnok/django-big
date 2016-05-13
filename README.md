@@ -65,19 +65,19 @@ django-default-skeleton_project
 ```
 
 ### Create virtual environment
-On repository level
+On repository level:
 ```bash
 virtualenv env -p python3
 ```
 
 ### Activate virtual environment
-On repository level
+On repository level:
 ```bash
 source env/bin/activate
 ```
 
 ### Install requirements
-On project level
+On project level:
 ```bash
 pip install -r requirements/local.txt
 ```
@@ -96,10 +96,10 @@ export SECRET_KEY='here your generated key'
 ```
 
 ### Install RabbitMQ
-Tutorial [here](http://www.rabbitmq.com/install-debian.html)
+Tutorial [here](http://www.rabbitmq.com/install-debian.html).
 
 ### Run local server
-On project level
+On project level:
 ```bash
 python manage.py runserver --settings config.settings.local
 ```
