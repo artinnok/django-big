@@ -1,6 +1,22 @@
 # Default Django Skeleton
 
-Python Interpreter version: 3.4.3+
+### Intro
+This is my preferred Django Skeleton. I hope this was build at the top of best
+practices and approaches.
+
+Pull requests are welcome!
+
+### Python Interpreter version
+* Python 3.4.3+
+
+### Main project dependencies
+* [Django](https://www.djangoproject.com/)
+* [RabbitMQ](http://www.rabbitmq.com/)
+* [Celery](http://www.celeryproject.org/)
+
+### OS requirements
+* Mac OS X
+* UNIX like OS
 
 ### Project structure
 Repository level:
@@ -37,27 +53,43 @@ core/
 ## Work with skeleton
 
 ### Clone project
-```
+```bash
 git clone git@github.com:artinnok/django-default-skeleton.git
 django-default-skeleton_project
 ```
 
 ### Create virtual environment
 On repository level
-```
+```bash
 virtualenv env -p python3
 ```
 
 ### Activate virtual environment
 On repository level
-```
+```bash
 source env/bin/activate
 ```
 
 ### Install requirements
 On project level
-```
+```bash
 pip install -r requirements/local.txt
 ```
 
+### Generate your project SECRET_KEY
+You can generate key at [this site](http://www.miniwebtool.com/) or by
+yourself.
 
+### Add your SECRET_KEY
+Open in your preferred text editor (vim, nano etc.) file *env/bin/activate*
+and
+prepend to
+end this part:
+```bash
+export SECRET_KEY='here your generated key'
+```
+
+### Install RabbitMQ
+Tutorial [here](http://www.rabbitmq.com/install-debian.html)
+
+### Enjoy!
