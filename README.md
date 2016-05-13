@@ -1,2 +1,1 @@
-# default
-default django project
+# Default Django Skeleton
