@@ -7,9 +7,9 @@ practices and approaches.
 Pull requests are welcome!
 
 ### This skeleton main features
-* Config splitted into **base/local/production/packages**
-* Requirements splitted **into base/local/production**
-* Urls splitted into **base/local/production**
+* Config splitted into *base/local/production/packages*
+* Requirements splitted *into base/local/production*
+* Urls splitted into *base/local/production*
 * Celery added
 
 ### Python Interpreter version
