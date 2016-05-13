@@ -76,3 +76,7 @@ target/
 # PyCharm
 .idea/
 .idea_modules/
+
+# static
+collect_static/
+static/build/
