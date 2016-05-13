@@ -6,6 +6,12 @@ practices and approaches.
 
 Pull requests are welcome!
 
+### This skeleton main features
+* Config splitted into **base/local/production/packages**
+* Requirements splitted **into base/local/production**
+* Urls splitted into **base/local/production**
+* Celery added
+
 ### Python Interpreter version
 * Python 3.4.3+
 
@@ -92,4 +98,9 @@ export SECRET_KEY='here your generated key'
 ### Install RabbitMQ
 Tutorial [here](http://www.rabbitmq.com/install-debian.html)
 
+### Run local server
+On project level
+```bash
+python manage.py runserver --settings config.settings.local
+```
 ### Enjoy!
