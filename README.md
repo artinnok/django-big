@@ -83,7 +83,7 @@ pip install -r requirements/local.txt
 ```
 
 ### Generate your project SECRET_KEY
-You can generate key at [this site](http://www.miniwebtool.com/) or by
+You can generate key at [this site](http://www.miniwebtool.com/django-secret-key-generator/) or by
 yourself.
 
 ### Add your SECRET_KEY
