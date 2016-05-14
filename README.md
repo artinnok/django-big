@@ -66,7 +66,7 @@ git clone git@github.com:artinnok/django-default-skeleton.git django-default-ske
 ### Create virtual environment
 On repository level:
 ```bash
-virtualenv env -p python3
+virtualenv -p python3 env 
 ```
 
 ### Activate virtual environment
