@@ -94,6 +94,12 @@ end this part:
 export SECRET_KEY='here your generated key'
 ```
 
+### Rectivate virtual environment
+On repository level:
+```bash
+source env/bin/activate
+```
+
 ### Install RabbitMQ
 Tutorial [here](http://www.rabbitmq.com/install-debian.html).
 
