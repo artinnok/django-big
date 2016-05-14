@@ -60,8 +60,7 @@ core/
 
 ### Clone project
 ```bash
-git clone git@github.com:artinnok/django-default-skeleton.git
-django-default-skeleton_project
+git clone git@github.com:artinnok/django-default-skeleton.git django-default-skeleton_project
 ```
 
 ### Create virtual environment
