@@ -1,14 +1,14 @@
 # Default Django Skeleton
 
 ### Intro
-This is my preferred Django Skeleton. I hope this was build at the top of best
+This is my preferred Django Skeleton. I hope this was built at the top of best
 practices and approaches.
 
 Pull requests are welcome!
 
 ### This skeleton main features
-* Config splitted into *base/local/production/packages*
-* Requirements splitted *into base/local/production*
+* Settings splitted into *base/local/production/packages*
+* Requirements splitted into *base/local/production*
 * Urls splitted into *base/local/production*
 * Celery added
 
@@ -16,9 +16,9 @@ Pull requests are welcome!
 * Python 3.4.3+
 
 ### Main project dependencies
-* [Django](https://www.djangoproject.com/)
-* [RabbitMQ](http://www.rabbitmq.com/)
-* [Celery](http://www.celeryproject.org/)
+* [Django](https://www.djangoproject.com/) - MVC web framework
+* [RabbitMQ](http://www.rabbitmq.com/) - broker for Celery
+* [Celery](http://www.celeryproject.org/) - asynchronous queue
 
 ### OS requirements
 * Mac OS X
