@@ -82,8 +82,12 @@ pip install -r requirements/local.txt
 ```
 
 ### Generate your project SECRET_KEY
-You can generate key at [this site](http://www.miniwebtool.com/django-secret-key-generator/) or by
-yourself.
+You can generate key via django-extensions:
+```bash
+python manage.py generate_secret_key
+```
+
+Or at [this site](http://www.miniwebtool.com/django-secret-key-generator/).
 
 ### Add your SECRET_KEY
 Open in your preferred text editor (vim, nano etc.) file *env/bin/activate*
