@@ -11,5 +11,6 @@ urlpatterns = [
     ),
     url(
         regex=r'^admin/',
-        view=admin.site.urls),
+        view=admin.site.urls
+    ),
 ]
