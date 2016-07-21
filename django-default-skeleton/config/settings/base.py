@@ -5,6 +5,8 @@ from config.settings.celery import *
 
 BASE_DIR = Path(__file__).ancestor(3)
 
+TEMPLATE_DIR = BASE_DIR.child('templates')
+
 SECRET_KEY = os.environ['SECRET_KEY']
 
 INSTALLED_APPS = [
@@ -46,8 +48,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 TEMPLATES = [
     {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [TEMPLATE_DIR.child('jinja')],
+        'APP_DIRS': False,
+        'OPTIONS': {
+            'environment': 'config.jinja2.environment',
+        },
+    },
+    {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR.child("templates")],
+        'DIRS': [TEMPLATE_DIR.child('django')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
