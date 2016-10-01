@@ -5,8 +5,6 @@ from config.settings.celery import *
 
 BASE_DIR = Path(__file__).ancestor(3)
 
-TEMPLATE_DIR = BASE_DIR.child('templates')
-
 SECRET_KEY = os.environ['SECRET_KEY']
 
 INSTALLED_APPS = [
@@ -20,7 +18,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig'
 ]
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -29,7 +27,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-)
+]
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -48,16 +46,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.jinja2.Jinja2',
-        'DIRS': [TEMPLATE_DIR.child('jinja')],
-        'APP_DIRS': False,
-        'OPTIONS': {
-            'environment': 'config.jinja2.environment',
-        },
-    },
-    {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR.child('django')],
+        'DIRS': [BASE_DIR.child('templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
