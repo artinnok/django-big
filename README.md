@@ -1,41 +1,71 @@
-# Default Django Skeleton
+# Django Default
 
-### Intro
-This is my preferred Django Skeleton. I hope this was built at the top of best
-practices and approaches.
+## Intro
 
-Pull requests are welcome!
-
-### This skeleton main features
-* Settings splitted into *base/local/production/packages*
-* Requirements splitted into *base/local/production*
-* Urls splitted into *base/local/production*
-* Celery added
+### This cookiecutter main features
+* Settings splitted into **base/local/production**
+* Requirements splitted into **base/local/production**
+* Urls splitted into **base/local/production**
+* Fabfile for remote deployment
+* Celery for asynchronous tasks
+* Common behaviors (mixins) for models
+* Common models
+* webpack.js for static files handling
 
 ### Python Interpreter version
 * Python 3.4.3+
 
 ### Main project dependencies
-* [Django](https://www.djangoproject.com/) - MVC web framework
-* [RabbitMQ](http://www.rabbitmq.com/) - broker for Celery
+* [Django](https://www.djangoproject.com/) - Python MVC web framework
 * [Celery](http://www.celeryproject.org/) - asynchronous queue
+* [Fabric](http://www.fabfile.org/index.html) - deployment and system
+administration tool
+* [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/#) - command
+line tool that creates projects from
+templates
+* [webpack.js](http://webpack.github.io/) - module bundler
+* [npm.js](https://www.npmjs.com/) - package manager for javascript
 
 ### OS requirements
 * Mac OS X
 * UNIX like OS
 
-### Project structure
-Repository level:
+
+
+## Work with cookiecutter
+
+### Clone project
+```bash
+git clone git@github.com:artinnok/django-default.git
 ```
-django-default-skeleton_project/
+
+### Install cookiecutter
+```bash
+[sudo] pip install cookiecutter
+or
+[sudo] easy_install cookiecutter
+or on Mac OS X
+[sudo] brew install cookiecutter
+```
+
+### Start interactive cookiecutter install process:
+```bash
+cookiecutter django-default
+```
+After fast installation proccess you receive **yoursite_project** with
+structure:
+
+*Repository level*:
+```
+yoursite_project/
 ├── README.md
-├── django-default-skeleton
+├── django-default
 └── env
 ```
 
-Project level:
+*Project level*:
 ```
-django-default-skeleton/
+yoursite/
 ├── config
 ├── core
 ├── manage.py
@@ -43,42 +73,32 @@ django-default-skeleton/
 └── templates
 ```
 
-App level:
+*App level*:
 ```
 core/
 ├── __init__.py
 ├── admin.py
 ├── apps.py
-├── forms.py
+├── behaviors.py
+├── common_models.py
 ├── migrations
 ├── models.py
-├── tasks.py
-├── tests.py
 └── views.py
 ```
-## Work with skeleton
 
-### Clone project
+### Install virtualenv
 ```bash
-git clone git@github.com:artinnok/django-default-skeleton.git django-default-skeleton_project
+[sudo] pip install virtualenv
+or
+[sudo] easy_install virtualenv
+or on Ubuntu
+[sudo] apt-get install virtualenv
 ```
 
-### Create virtual environment
-On repository level:
+### Create virtual environment for **yoursite_project**
 ```bash
-virtualenv -p python3 env 
-```
-
-### Activate virtual environment
-On repository level:
-```bash
-source env/bin/activate
-```
-
-### Install requirements
-On project level:
-```bash
-pip install -r requirements/local.txt
+cd yoursite_project # repository level
+virtualenv -p python3 env
 ```
 
 ### Generate your project SECRET_KEY
@@ -91,21 +111,22 @@ Or at [this site](http://www.miniwebtool.com/django-secret-key-generator/).
 
 ### Add your SECRET_KEY
 Open in your preferred text editor (vim, nano etc.) file *env/bin/activate*
-and
-prepend to
-end this part:
+and prepend to end this part:
 ```bash
 export SECRET_KEY='here your generated key'
+export DJANGO_SETTINGS_MODULE='config.settings.local'
 ```
 
-### Rectivate virtual environment
-On repository level:
+### Activate virtual environment
 ```bash
 source env/bin/activate
 ```
 
-### Install RabbitMQ
-Tutorial [here](http://www.rabbitmq.com/install-debian.html).
+### Install requirements
+```bash
+cd yoursite # project level
+pip install -r requirements/local.txt
+```
 
 ### Run local server
 On project level:
