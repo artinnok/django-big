@@ -1,12 +1,11 @@
 {
-  "name": "",
+  "name": "{{ cookiecutter.name }}",
   "version": "1.0.0",
-  "description": "",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "{{ cookiecutter.author }}",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "6.3.6",
