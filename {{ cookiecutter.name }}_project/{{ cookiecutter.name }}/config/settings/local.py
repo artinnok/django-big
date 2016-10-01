@@ -17,3 +17,5 @@ ROOT_URLCONF = 'config.urls.local'
 INSTALLED_APPS = INSTALLED_APPS + [
     'debug_toolbar',
 ]
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'

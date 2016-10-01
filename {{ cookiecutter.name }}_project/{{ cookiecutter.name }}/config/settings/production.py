@@ -17,3 +17,5 @@ DATABASES = {
 }
 
 ROOT_URLCONF = 'config.urls.production'
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
