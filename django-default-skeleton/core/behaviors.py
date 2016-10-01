@@ -1,4 +1,5 @@
 from django.db import models
+from imagekit.models import ProcessedImageField
 
 
 class Titleable(models.Model):
@@ -20,28 +21,10 @@ class Textable(models.Model):
         abstract = True
 
 
-class Descriptionable(models.Model):
-    description = models.TextField(
-        verbose_name='Описание'
-    )
-
-    class Meta:
-        abstract = True
-
-
-class ShortDescriptionable(models.Model):
-    short_description = models.TextField(
-        verbose_name='Краткое описание',
-        max_length=500
-    )
-
-    class Meta:
-        abstract = True
-
-
 class Imageable(models.Model):
-    image = models.ImageField(
+    image = ProcessedImageField(
         verbose_name='Изображение',
+        options={'optimize': True}
     )
 
     class Meta:
