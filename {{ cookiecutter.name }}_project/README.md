@@ -1,0 +1,1 @@
+# {{ cookiecutter.name }} by {{ cookiecutter.author }}
