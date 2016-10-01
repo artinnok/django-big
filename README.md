@@ -10,7 +10,7 @@
 * Celery for asynchronous tasks
 * Common behaviors (mixins) for models
 * Common models
-* webpack.js for static files handling
+* webpack.js for static files handling - JS and SCSS build
 
 ### Python Interpreter version
 * Python 3.4.3+
@@ -91,7 +91,7 @@ core/
 [sudo] pip install virtualenv
 or
 [sudo] easy_install virtualenv
-or on Ubuntu
+or on Debian and Ubuntu
 [sudo] apt-get install virtualenv
 ```
 
@@ -126,6 +126,32 @@ source env/bin/activate
 ```bash
 cd yoursite # project level
 pip install -r requirements/local.txt
+```
+
+### Migrate database
+```bash
+python manage.py migrate --settings config.settings.local
+```
+
+### Install Node.js + npm
+```bash
+on Debian and Ubuntu
+sudo apt-get install -y build-essential
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+or Mac OS X
+[sudo] brew install node
+```
+
+### Install npm dependencies
+On project level
+```bash
+npm install
+```
+
+### Build static with webpack
+```bash
+webpack
 ```
 
 ### Run local server
