@@ -3,7 +3,7 @@ from config.settings.base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['example.com']
+ALLOWED_HOSTS = []
 
 DATABASES = {
     'default': {
