@@ -80,3 +80,9 @@ target/
 # static
 collect_static/
 static/build/
+
+# media
+media/
+
+# node
+node_modules/
