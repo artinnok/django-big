@@ -18,10 +18,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'imagekit',
     'django_extensions',
-    'core.apps.CoreConfig'
+    'core',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
