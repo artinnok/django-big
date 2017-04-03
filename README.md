@@ -1,4 +1,4 @@
-# Django Default
+# Django Big
 
 ## Intro
 
@@ -11,6 +11,7 @@
 * Common behaviors (mixins) for models
 * Common models
 * webpack.js for static files handling - JS and SCSS build
+* dotenv for environment variables
 
 ### Python Interpreter version
 * Python 3.4.3+
@@ -23,6 +24,7 @@ administration tool
 * [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/#) - command
 line tool that creates projects from
 templates
+* [python-dotenv](https://github.com/theskumar/python-dotenv) - convenient environment variables management tool
 * [webpack.js](http://webpack.github.io/) - module bundler
 * [npm.js](https://www.npmjs.com/) - package manager for javascript
 
