@@ -1,11 +1,13 @@
 import os
 
 from unipath import Path
+from dotenv import load_dotenv
 
 from config.settings.celery import *
 
-
 BASE_DIR = Path(__file__).ancestor(3)
+
+load_dotenv(BASE_DIR.child("config").child("settings").child(".env"))
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
