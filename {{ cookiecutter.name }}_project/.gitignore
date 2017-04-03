@@ -89,3 +89,6 @@ node_modules/
 
 # Celery
 celerybeat*
+
+# python-dotenv
+.env
